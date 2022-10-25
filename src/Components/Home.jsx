@@ -3,10 +3,15 @@ import { Link } from "react-router-dom"
 const Home = () => {
     return (
         <div>
-            <ul className="list-none">
-                <li> <button> Add User </button> </li>
-                <li> <button> Go Back </button> </li>
-            </ul>
+            <nav className="navbar bg-light">
+                <div className="container-fluid">
+                    <a className="navbar-brand">Full Stack Application</a>
+                    <form className="d-flex" role="search">
+                        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                            <button className="btn btn-outline-primary" type="submit">Search</button>
+                    </form>
+                </div>
+            </nav>
         </div>
     );
 }
