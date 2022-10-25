@@ -1,13 +1,28 @@
+import Buttons from "./Buttons";
+import {axios} from "axios"
+import { useState, useEffect } from "react";
+
 const AdminTables = () => {
+
+    const [admin, setAdmin]=useState([
+
+    ])
+
+    useEffect( () => {
+
+    }, [])
+
     return (
-        <div className="container">
+        <div className="container text-center mt-5">
+            <h2> ADMIN </h2>
             <table class="table">
                 <thead>
                     <tr>
                         <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
+                        <th scope="col">Username</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Role</th>
+                        <th scope="col">Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -16,6 +31,9 @@ const AdminTables = () => {
                         <td>Mark</td>
                         <td>Otto</td>
                         <td>@mdo</td>
+                        <td>
+                           <Buttons />
+                        </td>
                     </tr>
                 </tbody>
             </table>
