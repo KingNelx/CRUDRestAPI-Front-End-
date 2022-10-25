@@ -1,16 +1,21 @@
 import Buttons from "./Buttons";
-import {axios} from "axios"
+import axios from "axios"
 import { useState, useEffect } from "react";
 
 const AdminTables = () => {
 
-    const [admin, setAdmin]=useState([
+    const [admin, setAdmin] = useState([
 
     ])
 
-    useEffect( () => {
-
+    useEffect(() => {
+       loadAdmins();
     }, [])
+
+    const loadAdmins = async () => {
+        const result = await axios.get("http://localhost:8080/admin/getAdmins");
+        setAdmin(result.data)
+    }
 
     return (
         <div className="container text-center mt-5">
@@ -26,15 +31,19 @@ const AdminTables = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        <td>
-                           <Buttons />
-                        </td>
-                    </tr>
+                    {
+                        admin.map((admins, index) => (
+                            <tr>
+                                <th scope="row" key={index}>{index+1}</th>
+                                <td>{admins.userName}</td>
+                                <td>{admins.userName}</td>
+                                <td>@mdo</td>
+                                <td>
+                                    <Buttons />
+                                </td>
+                            </tr>
+                        ))
+                    }
                 </tbody>
             </table>
         </div>
