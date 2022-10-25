@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import Column from "./Column";
 
 const Home = () => {
     return (
@@ -12,7 +13,7 @@ const Home = () => {
                     </form>
                 </div>
             </nav>
-
+        <Column />
         </div>
     );
 }
