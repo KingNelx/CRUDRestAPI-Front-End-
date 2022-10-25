@@ -1,15 +1,14 @@
+import { Link } from "react-router-dom"
+
 const Home = () => {
     return (
         <div>
-            <nav className="top-nav">
-                <div>
-                    <li>
-                        <a href=""></a>
-                    </li>
-                </div>
-            </nav>
+            <ul className="list-none">
+                <li> <button> Add User </button> </li>
+                <li> <button> Go Back </button> </li>
+            </ul>
         </div>
-      );
+    );
 }
- 
+
 export default Home;
