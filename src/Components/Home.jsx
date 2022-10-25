@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import UserTables from "./UserTables";
 
 const Home = () => {
     return (
@@ -12,6 +13,8 @@ const Home = () => {
                     </form>
                 </div>
             </nav>
+
+            <UserTables />
         </div>
     );
 }
