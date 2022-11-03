@@ -1,13 +1,19 @@
+import Users from "./Users";
+
+
 const Home = () => {
     return (
-        <div className="top-nav">
-            <div className="left-title">
-                <h2>Full Stacp Application</h2>
+        <div>
+            <div className="top-nav">
+                <div className="left-title">
+                    <h2>Full Stack Application</h2>
+                </div>
+                <div className="right-title">
+                    <input type="text" placeholder="Search" />
+                    <button>Search</button>
+                </div>
             </div>
-
-            <div className="right-title">
-
-            </div>
+            <Users />
         </div>
     );
 }
