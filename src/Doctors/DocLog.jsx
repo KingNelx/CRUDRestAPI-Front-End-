@@ -5,9 +5,19 @@ import { useEffect, useState } from "react";
 const DocLog = () => {
 
     const [doctor, setDoctor] = useState([])
+
     useEffect(() => {
 
     }, [])
+
+    const getAllDoctors = () => {
+
+    }
+
+    const addDoctor = () => {
+
+    }
+
     return (
         <div className="container mt-5 text-center">
             <Link type="button" class="btn btn-outline-primary mb-5 mt-4">Add Doctors</Link>

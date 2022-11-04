@@ -13,7 +13,13 @@ const PatientLog = () => {
     }, [])
 
 
-  
+    const getAllPatients = () => {
+
+    }
+
+    const addPatient = () => {
+        
+    }
 
     return (
         <div className="container mt-5 text-center">
