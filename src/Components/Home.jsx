@@ -1,6 +1,4 @@
 import Users from "./Users";
-
-
 const Home = () => {
     return (
         <div>

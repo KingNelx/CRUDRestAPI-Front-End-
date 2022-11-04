@@ -5,7 +5,7 @@ const Users = () => {
         <div className="users-container">
             <div className="row">
                 <div className="col">
-                    <h2>Doctor</h2>
+                    <h2>Admin</h2>
                     <Link to="docLog">Select</Link>
                 </div>
                 <div className="col">
