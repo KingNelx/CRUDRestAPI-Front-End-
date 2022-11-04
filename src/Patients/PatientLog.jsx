@@ -2,7 +2,19 @@ import { Link } from "react-router-dom"
 import Button from "../Components/Button";
 import { axios } from "axios"
 import { useEffect, useState } from "react";
+
+
 const PatientLog = () => {
+
+    const [patient, setPatient] = useState([])
+
+    useEffect( () => {
+
+    }, [])
+
+
+  
+
     return (
         <div className="container mt-5 text-center">
             <Link type="button" class="btn btn-outline-primary mb-5 mt-4">Add Patient</Link>
