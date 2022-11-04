@@ -11,10 +11,18 @@ const DocLog = () => {
     }, [])
 
     const getAllDoctors = () => {
-
+       
     }
 
     const addDoctor = () => {
+
+    }
+
+    const updateDoctor = () => {
+
+    }
+
+    const deleteDoctor = () => {
 
     }
 

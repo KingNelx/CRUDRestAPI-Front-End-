@@ -18,7 +18,15 @@ const PatientLog = () => {
     }
 
     const addPatient = () => {
-        
+
+    }
+
+    const updatePatient = () => {
+
+    }
+
+    const deletePatient = () => {
+
     }
 
     return (
