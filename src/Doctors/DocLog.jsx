@@ -11,7 +11,7 @@ const DocLog = () => {
     }, [])
 
     const getAllDoctors = () => {
-       
+
     }
 
     const addDoctor = () => {
