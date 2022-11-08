@@ -1,17 +1,19 @@
 import { Link } from "react-router-dom"
 import Button from "../Components/Button";
 import { useEffect, useState } from "react";
+import axios from "axios"
 
 const DocLog = () => {
 
     const [doctor, setDoctor] = useState([])
 
     useEffect(() => {
-
+        getAllDoctors();
     }, [])
 
-    const getAllDoctors = () => {
-
+    const getAllDoctors = async () => {
+        const result = await axios.get("http://localhost:8080/doctor/getDoctors")
+        setDoctor(result.data)
     }
 
     const addDoctor = () => {
@@ -43,18 +45,22 @@ const DocLog = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Jonel</td>
-                        <td>Tapia</td>
-                        <td>Cancer</td>
-                        <td>12345</td>
-                        <td>12345</td>
-                        <td>12345</td>
-                        <td>
-                            <Button />
-                        </td>
-                    </tr>
+                    {
+                        doctor.map((doctors, index) => (
+                            <tr>
+                                <th scope="row" key={index}>{index+1}</th>
+                                <td>{doctors.firstName}</td>
+                                <td>{doctors.lastName}</td>
+                                <td>{doctors.specialties}</td>
+                                <td>{doctors.licenseNumber}</td>
+                                <td>{doctors.ptrNumber}</td>
+                                <td>{doctors.prcNumber}</td>
+                                <td>
+                                    <Button />
+                                </td>
+                            </tr>
+                        ))
+                    }
                 </tbody>
             </table>
             <Link to="/">Go Back</Link>
