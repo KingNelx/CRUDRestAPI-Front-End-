@@ -9,7 +9,7 @@ const Users = () => {
                     <Link to="docLog">Select</Link>
                 </div>
                 <div className="col">
-                    <h2>Patient</h2>
+                    <h2>RHU</h2>
                     <Link to="/patientLog">Select</Link>
                 </div>
             </div>
