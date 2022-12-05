@@ -15,6 +15,7 @@ const Home = () => {
             </nav>
             <section className="mt-5 px-5">
                 <Link to="/addUser" className="btn btn-outline-primary">Add User</Link>
+                <Link to="/admins" className="btn btn-outline-primary mx-2">View Admins</Link>
             </section>
             <ViewUsers />
         </div>

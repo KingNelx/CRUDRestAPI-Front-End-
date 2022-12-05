@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 const ViewUsers = () => {
 
-    const getAllUsers = async() => {
+    const getAllUsers = async () => {
         const getAllUser = await axios.get("http://localhost:8080/user/getAllUsers")
         setUser(getAllUser.data)
     }
@@ -52,6 +52,7 @@ const ViewUsers = () => {
                         <td>Otto</td>
                         <td>@mdo</td>
                     </tr> */}
+                    
                 </tbody>
             </table>
         </div>

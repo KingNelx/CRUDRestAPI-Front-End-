@@ -6,7 +6,8 @@ import axios from "axios"
 const AddForm = () => {
 
     let navigate = useNavigate()
-    
+
+
     const [user, setUsers] = useState({
         firstName: "",
         lastName: "",
@@ -17,9 +18,9 @@ const AddForm = () => {
     const { firstName, lastName, email, userName } = user
 
     const onInputChange = (e) => {
-        setUsers({...user, [e.target.name]:e.target.value})
+        setUsers({ ...user, [e.target.name]: e.target.value })
     }
-    
+
     const onSubmit = async (e) => {
         e.preventDefault()
         await axios.post("http://localhost:8080/user/addUser", user)
@@ -27,7 +28,7 @@ const AddForm = () => {
     }
     return (
         <div className="container">
-            <form className="row mt-5" onSubmit={(e)=>onSubmit(e)}>
+            <form className="row mt-5" onSubmit={(e) => onSubmit(e)}>
                 <div class="mb-3 col-md-5">
                     <label for="exampleInputEmail1" class="form-label">Firstname</label>
                     <input type={"text"} class="form-control" placeholder="Firstname"
