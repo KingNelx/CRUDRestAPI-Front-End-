@@ -1,25 +1,20 @@
 import './App.css';
-import { BrowserRouter as Router, Route,Routes } from 'react-router-dom';
-import Home from './Components/Home';
-import AddForm from './Components/AddForm';
-import UpdateForm from './Components/UpdateForm';
-import Admins from './Components/Admins';
-import AddAdmin from './Components/AddAdmin';
-
+import Home from './Home';
+import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import AddUser from './AddUser';
+import EditUser from './EditUser';
 const App = () => {
-  return ( 
-    <div>
-     <Router>
+  return (
+
+    <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/addUser" element={<AddForm />} />
-        <Route path="/updateUser" element={<UpdateForm />} />
-        <Route path="/admins" element={<Admins />} />
-        <Route path="/addAdmin" element={<AddAdmin />} />
+        <Route path="addUser" element={<AddUser />} />
+        <Route path="editUser/:id" element={<EditUser />} />
       </Routes>
-     </Router>
-    </div>
-   );
+    </Router>
+
+  );
 }
- 
+
 export default App;
